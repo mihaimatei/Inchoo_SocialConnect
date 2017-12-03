@@ -90,14 +90,14 @@ class Inchoo_SocialConnect_Block_Facebook_Account extends Mage_Core_Block_Templa
         return null;
     }
 
-    protected function _getBirthday()
-    {
-        if($this->userInfo->getBirthday()) {
-            $birthday = date('F j, Y', strtotime($this->userInfo->getBirthday()));
-            return $birthday;
-        }
-
-        return null;
-    }
+//    protected function _getBirthday()
+//    {
+//        if($this->userInfo->getBirthday()) {
+//            $birthday = date('F j, Y', strtotime($this->userInfo->getBirthday()));
+//            return $birthday;
+//        }
+//
+//        return null;
+//    }
 
 }

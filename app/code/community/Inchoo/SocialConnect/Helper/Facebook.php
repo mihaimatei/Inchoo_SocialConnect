@@ -59,7 +59,7 @@ class Inchoo_SocialConnect_Helper_Facebook extends Mage_Core_Helper_Abstract
         $firstName,
         $lastName,
         $facebookId,
-        $birthday = null,
+//        $birthday = null,
         $gender = null,
         $token)
     {
@@ -73,9 +73,9 @@ class Inchoo_SocialConnect_Helper_Facebook extends Mage_Core_Helper_Abstract
             ->setInchooSocialconnectFtoken(serialize($token))
             ->setPassword($customer->generatePassword(10));
 
-        if(!empty($birthday)) {
-            $customer->setDob($birthday);
-        }
+//        if(!empty($birthday)) {
+//            $customer->setDob($birthday);
+//        }
 
         if(!empty($gender)) {
             $customer->setGender($gender);
@@ -85,7 +85,8 @@ class Inchoo_SocialConnect_Helper_Facebook extends Mage_Core_Helper_Abstract
         $customer->save();
 
         $customer->sendNewAccountEmail('confirmed', '', Mage::app()->getStore()->getId());
-
+        /* saving confirmation set to null seperatly */
+        $customer->setConfirmation(null)->save();
         Mage::getSingleton('customer/session')->setCustomerAsLoggedIn($customer);
 
     }

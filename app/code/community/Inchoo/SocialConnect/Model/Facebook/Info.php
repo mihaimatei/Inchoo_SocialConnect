@@ -19,7 +19,7 @@ class Inchoo_SocialConnect_Model_Facebook_Info extends Varien_Object
         'first_name',
         'last_name',
         'link',
-        'birthday',
+//        'birthday',
         'gender',
         'email',
         'picture.type(large)'

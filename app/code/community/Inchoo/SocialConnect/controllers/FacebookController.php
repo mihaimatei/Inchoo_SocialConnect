@@ -114,6 +114,13 @@ class Inchoo_SocialConnect_FacebookController extends Inchoo_SocialConnect_Contr
                 return $this;
             }
 
+            $email = $info->getEmail();
+            if(empty($email)) {
+                throw new Exception(
+                    $this->__('Sorry, could not retrieve your Facebook email address. Please try again.')
+                );
+            }
+
             $customersByEmail = $helper->getCustomersByEmail($info->getEmail());
 
             if($customersByEmail->getSize()) {
@@ -149,9 +156,11 @@ class Inchoo_SocialConnect_FacebookController extends Inchoo_SocialConnect_Contr
                 );
             }
 
-            $birthday = $info->getBirthday();
-            $birthday = Mage::app()->getLocale()->date($birthday, null, null, false)
-                ->toString('yyyy-MM-dd');
+
+
+//            $birthday = $info->getBirthday();
+//            $birthday = Mage::app()->getLocale()->date($birthday, null, null, false)
+//                ->toString('yyyy-MM-dd');
 
             $gender = $info->getGender();
             if(empty($gender)) {
@@ -167,7 +176,7 @@ class Inchoo_SocialConnect_FacebookController extends Inchoo_SocialConnect_Contr
                 $info->getFirstName(),
                 $info->getLastName(),
                 $info->getId(),
-                $birthday,
+//                $birthday,
                 $gender,
                 $token
             );

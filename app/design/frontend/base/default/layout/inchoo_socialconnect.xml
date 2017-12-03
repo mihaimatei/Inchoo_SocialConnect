@@ -133,6 +133,11 @@
    <inchoo_socialconnect_account_facebook translate="label">
         <label>Customer My Account Facebook Connect</label>
         <update handle="customer_account"/>
+        <reference name="root">
+            <action method="addBodyClass">
+                <className>customer-account-index</className>
+            </action>
+        </reference>
         <reference name="head">
             <action method="setTitle" translate="title" module="inchoo_socialconnect">
                 <title>Facebook Connect</title>
