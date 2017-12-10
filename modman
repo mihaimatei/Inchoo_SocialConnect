@@ -17,7 +17,7 @@ app/locale/pt_BR/Inchoo_SocialConnect.csv                         app/locale/pt_
 
 
 @shell echo "--"
-@shell MODULE_NAME="$(basename ${MODULE})" && echo "Adding '${MODULE_NAME}' as a GIT submodule..." && cd ../../ && git submodule add https://github.com/mihaimatei/{MODULE_NAME}.git .modman/${MODULE_NAME}/
+@shell MODULE_NAME="$(basename ${MODULE})" && echo "Adding '${MODULE_NAME}' as a GIT submodule..." && cd ../../ && git submodule add https://github.com/mihaimatei/${MODULE_NAME}.git .modman/${MODULE_NAME}/
 
 @shell echo "--"
 @shell echo "Allow symlinks"
