@@ -14,3 +14,17 @@ app/locale/it_IT/Inchoo_SocialConnect.csv                         app/locale/it_
 app/locale/tr_TR/Inchoo_SocialConnect.csv                         app/locale/tr_TR/Inchoo_SocialConnect.csv
 app/locale/nl_NL/Inchoo_SocialConnect.csv                         app/locale/nl_NL/Inchoo_SocialConnect.csv
 app/locale/pt_BR/Inchoo_SocialConnect.csv                         app/locale/pt_BR/Inchoo_SocialConnect.csv
+
+
+@shell echo "--"
+@shell MODULE_NAME="$(basename ${MODULE})" && echo "Adding '${MODULE_NAME}' as a GIT submodule..." && cd ../../ && git submodule add https://github.com/mihaimatei/{MODULE_NAME}.git .modman/${MODULE_NAME}/
+
+@shell echo "--"
+@shell echo "Allow symlinks"
+@shell n98-magerun dev:symlinks --on --global
+
+@shell echo "--"
+@shell echo "Clearing Magento Caches..."
+@shell n98-magerun cache:flush
+
+@shell echo "--"
