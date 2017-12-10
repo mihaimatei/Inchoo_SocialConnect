@@ -14,6 +14,7 @@ app/locale/it_IT/Inchoo_SocialConnect.csv                         app/locale/it_
 app/locale/tr_TR/Inchoo_SocialConnect.csv                         app/locale/tr_TR/Inchoo_SocialConnect.csv
 app/locale/nl_NL/Inchoo_SocialConnect.csv                         app/locale/nl_NL/Inchoo_SocialConnect.csv
 app/locale/pt_BR/Inchoo_SocialConnect.csv                         app/locale/pt_BR/Inchoo_SocialConnect.csv
+app/locale/ro_RO/Inchoo_SocialConnect.csv                         app/locale/ro_RO/Inchoo_SocialConnect.csv
 
 
 @shell echo "--"
